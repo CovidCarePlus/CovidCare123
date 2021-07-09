@@ -70,6 +70,8 @@ public class content extends AppCompatActivity {
         book1 =  findViewById(R.id.oxybook);
         city=getIntent().getStringExtra("city");
         hospita=getIntent().getStringExtra("hosp");
+        LocalDate localDate=LocalDate.now();
+        String current=localDate.toString();
         Date currentTime = Calendar.getInstance().getTime();
         Calendar c = Calendar.getInstance();
         SimpleDateFormat dateFormat = new SimpleDateFormat("hh.mm.ss aa");
@@ -139,7 +141,7 @@ public class content extends AppCompatActivity {
             }
         });
         patient=getIntent().getStringExtra("gmail");
-         pa=patient;
+        pa=patient;
         String [] java =patient.split("(?=@)");
         String java1=java[0];
         databaseReference=FirebaseDatabase.getInstance().getReference().child("Update").child(java1);
@@ -147,8 +149,7 @@ public class content extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                afterday=snapshot.child("Date").getValue(String.class);
-               LocalDate localDate=LocalDate.now();
-               String current=localDate.toString();
+
                LocalDate afterthree=LocalDate.parse(afterday);
                Period period = Period.between(localDate,afterthree);
                number=period.getDays();
@@ -227,6 +228,7 @@ public class content extends AppCompatActivity {
 
                 startActivity(intent);
                 finish();
+
 
 
             }

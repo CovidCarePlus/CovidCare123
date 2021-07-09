@@ -35,7 +35,6 @@ public class NavigationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_navigation);
         setUpToolbar();
         gmail=getIntent().getStringExtra("gmailid");
-        name=getIntent().getStringExtra("name");
         hospitals=findViewById(R.id.im1);
         update=findViewById(R.id.im2);
         guidelines=findViewById(R.id.im3);

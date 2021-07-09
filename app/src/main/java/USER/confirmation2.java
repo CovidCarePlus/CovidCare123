@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.covidcare.HomeActivity;
 import com.example.covidcare.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -140,8 +141,9 @@ public class confirmation2 extends AppCompatActivity {
         oxybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),NavigationActivity.class);
+                Intent intent=new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
+                intent.putExtra("gmailid",gmail);
                 finish();
             }
         });
