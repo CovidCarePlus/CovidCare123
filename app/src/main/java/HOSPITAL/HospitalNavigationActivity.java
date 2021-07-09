@@ -2,10 +2,12 @@ package HOSPITAL;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.Uri;
@@ -150,6 +152,7 @@ public class HospitalNavigationActivity extends AppCompatActivity {
                 return false;
             }
         });
+
     }
     public void setUpToolbar() {
         drawerLayout = findViewById(R.id.drawerLayout11);
@@ -169,5 +172,18 @@ public class HospitalNavigationActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
 
+    }
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        HospitalNavigationActivity.this.finish();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }
