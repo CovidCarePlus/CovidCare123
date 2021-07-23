@@ -87,6 +87,12 @@ public class Hospitalupdateprofile extends AppCompatActivity {
                     }
                 });
             }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull @NotNull Exception e) {
+                progressBar.setVisibility(View.INVISIBLE);
+
+            }
         });
 
         document=FirebaseFirestore.getInstance().collection("hospital").document(gmailid);

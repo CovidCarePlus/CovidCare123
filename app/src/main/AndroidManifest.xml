@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
-        <activity android:name="HOSPITAL.Hospitalupdateprofile"></activity>
+        <activity android:name="USER.UserTerms"></activity>
+        <activity android:name="HOSPITAL.TermsAndCondition" />
+        <activity android:name="HOSPITAL.Hospitalupdateprofile" />
         <activity android:name="HOSPITAL.HospitalNavigationActivity" />
         <activity android:name="HOSPITAL.HospitalShowProfile" />
         <activity android:name="HOSPITAL.HospitalProfile" />

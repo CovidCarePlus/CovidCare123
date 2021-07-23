@@ -34,15 +34,7 @@
             android:textSize="30dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="105dp"
-            android:layout_marginTop="45dp"
-            android:text="Hospital"
-            android:textColor="#c0c0c0"
-            android:textSize="14dp"
-            android:textStyle="bold" />
+
 
 
     </RelativeLayout>

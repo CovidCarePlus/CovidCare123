@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="USER.UserTerms">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.03"
+            android:text="TERMS AND CONDITIONS"
+            android:textColor="#0d6e6a"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/userView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+           android:text="1. The Bed booked must be occupied by the user within two hours of booking"/>
+
+        <TextView
+            android:id="@+id/userView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="2. Not claiming the beds within alloted time may lead to cancellation of booking "/>
+
+
+        <TextView
+            android:id="@+id/userView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="3. The patient must show booking confirmation pdf at the hospital in order to claim the beds"/>
+
+
+        <TextView
+            android:id="@+id/userView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="4. The Patient must pay the Amount for booked bed at the respective hospital. "/>
+
+        <TextView
+            android:id="@+id/userView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="5. No need to pay for reservation of bed in case of government hospital"/>
+
+
+        <TextView
+            android:id="@+id/userView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="The patient must understand the seriousness of booking a bed in hospital and false/fake/playful booking will lead to legal actions"/>
+
+
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/check1"
+        android:textColor="@color/black"
+        android:buttonTint="@color/teal_700"
+        android:text="I agree to the terms and conditions"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="125dp"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="320dp"
+        android:id="@+id/terms1"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttonbackground"
+        android:text="Confirm"
+        android:gravity="center"
+        android:enabled="false"
+        android:textColor="#fff" />
+
+
+
+
+
+</LinearLayout>

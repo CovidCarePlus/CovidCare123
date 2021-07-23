@@ -12,4 +12,5 @@
     <color name="StateEnabled">#0d6e6a</color>
     <color name="cardBackground">#FE1D1D2F</color>
     <color name="disabled">#536872</color>
+    <color name="red">#FF0000</color>
 </resources>

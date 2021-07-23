@@ -24,7 +24,7 @@ public class R_AND_L extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),Registration.class);
+                Intent intent=new Intent(getApplicationContext(),UserTerms.class);
                 startActivity(intent);
                 finish();
 
