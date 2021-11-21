@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.covidcare.R;
 
-public class Guidelines extends AppCompatActivity {
+public class emptyactivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guidelines);
+        setContentView(R.layout.activity_emptyactivity);
     }
 }

@@ -69,7 +69,7 @@ public class Login extends AppCompatActivity {
                         String patient="patient";
                         if(user.isEmailVerified()){
                             if (user.getDisplayName().equals(patient)){
-                                Intent intent1 = new Intent(getApplicationContext(),NavigationActivity.class);
+                                Intent intent1 = new Intent(getApplicationContext(),emptyactivity2.class);
                                 intent1.putExtra("gmailid",gmail);
                                 startActivity(intent1);
                                 finish();
@@ -79,7 +79,7 @@ public class Login extends AppCompatActivity {
                             }
 
                         }else{
-                            Intent intent=new Intent(getApplicationContext(),Profile.class);
+                            Intent intent=new Intent(getApplicationContext(),Verification.class);
                             intent.putExtra("gmail",gmail);
                             intent.putExtra("password",password1);
                             startActivity(intent);

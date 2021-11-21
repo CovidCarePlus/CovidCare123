@@ -64,7 +64,7 @@ public class Verification extends AppCompatActivity {
                                     LocalDate localDate=LocalDate.now();
                                     String threeday=localDate.toString();
                                     date.setValue(threeday);
-                                    Intent intent1 = new Intent(getApplicationContext(),NavigationActivity.class);
+                                    Intent intent1 = new Intent(getApplicationContext(),emptyactivity.class);
                                     intent1.putExtra("gmailid",mailgid);
                                     intent1.putExtra("name",name);
                                     startActivity(intent1);

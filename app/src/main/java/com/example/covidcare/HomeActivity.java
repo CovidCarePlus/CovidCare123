@@ -6,7 +6,6 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -16,11 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
-import HOSPITAL.HospitalNavigationActivity;
-import HOSPITAL.REGandLOG;
-import HOSPITAL.Showdet;
-import USER.Login;
-import USER.NavigationActivity;
+
 import USER.R_AND_L;
 
 public class HomeActivity extends AppCompatActivity {
@@ -31,8 +26,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         imageSlider=findViewById(R.id.imageslider);
-
-        CardView hospital = (CardView) findViewById(R.id.h);
         CardView patient = (CardView) findViewById(R.id.p);
         ArrayList<SlideModel> images=new ArrayList<>();
         images.add(new SlideModel("https://i.ytimg.com/vi/nfsB5bfQgmo/maxresdefault.jpg","Thank you frontline warriors",null));
@@ -42,13 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         imageSlider.setImageList(images, ScaleTypes.CENTER_CROP);
 
 
-        hospital.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), REGandLOG.class);
-                startActivity(intent);
-            }
-        });
+
         patient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,37 +45,6 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-
-
-    }
-    @Override
-    protected void onStart(){
-        super.onStart();
-        String patient="patient";
-        String hospital="Hospital";
-        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-        if (user!=null){
-            if (user.isEmailVerified()){
-                if (user.getDisplayName().equals(patient)){
-                    String gmail= user.getEmail();
-                    Intent i = new Intent(getApplicationContext(), NavigationActivity.class);
-                    i.putExtra("gmailid", gmail);
-                    startActivity(i);
-
-                }
-                if (user.getDisplayName().equals(hospital)){
-                    String gmail= user.getEmail();
-                    Intent i = new Intent(getApplicationContext(), HospitalNavigationActivity.class);
-                    i.putExtra("mailid", gmail);
-                    startActivity(i);
-
-                }
-
-
-            }
-
-
-        }
 
 
     }

@@ -11,7 +11,6 @@ import android.widget.CompoundButton;
 
 import com.example.covidcare.R;
 
-import HOSPITAL.HospitalRegister;
 
 public class UserTerms extends AppCompatActivity {
     CheckBox checkBox;

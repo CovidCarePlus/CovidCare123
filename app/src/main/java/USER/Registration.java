@@ -79,7 +79,7 @@ public class Registration extends AppCompatActivity {
                         FirebaseUser user=FirebaseAuth.getInstance().getCurrentUser();
                         UserProfileChangeRequest profileChangeRequest=new UserProfileChangeRequest.Builder().setDisplayName(p).build();
                         user.updateProfile(profileChangeRequest);
-                        Intent intent=new Intent(getApplicationContext(),Profile.class);
+                        Intent intent=new Intent(getApplicationContext(),Verification.class);
                         intent.putExtra("gmail",gmail);
                         intent.putExtra("password",pass);
                         startActivity(intent);
